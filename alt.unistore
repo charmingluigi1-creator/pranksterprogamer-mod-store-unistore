@@ -1,0 +1,76 @@
+{
+    "storeInfo": {
+        "title": "pranksterprogamer mod store",
+        "author": "pranksterprogamer",
+        "description": "this is my unistore",
+        "url": "https://db.universal-team.net/unistore/universal-db-beta.unistore",
+        "file": "universal-db-beta.unistore",
+        "sheetURL": "https://db.universal-team.net/unistore/universal-db.t3x",
+        "sheet": "universal-db.t3x",
+        "bg_index": 1,
+        "bg_sheet": 0,
+        "revision": 91,
+        "version": 4
+    },
+    "storeContent": [
+        {
+            "info": {
+                "title": "usrcheat",
+                "author": "Universal-Team",
+                "description": "An easy to use app for installing and updating 3DS homebrew",
+                "category": ["utility"],
+                "console": ["3DS"],
+                "icon_index": 0,
+                "sheet_index": 0,
+                "last_updated": "2020-07-02 at 14:03 (UTC)",
+                "license": "gpl-3.0",
+                "version": "v2.5.1"
+            },
+            "usrcheat.bin": [
+                {
+                    "type": "downloadFile",
+                    "file": "https://github.com/charmingluigi1-creator/cheat-codes-for-some-ds-games-2/releases/download/fun/usrcheat.dat",
+                    "output": "%3DSX%/_nds/TWiLightMenu/extras/usrcheat.bin"
+                }
+            ],
+            "usrcheat.bin": [
+                {
+                    "type": "downloadFile",
+                    "file": "https://github.com/charmingluigi1-creator/cheat-codes-for-some-ds-games-2/releases/download/fun/usrcheat.dat",
+                    "output": "sdmc:/_nds/TWiLightMenu/extras"
+                },
+                {
+                    "type": "installCia",
+                    "file": "/usrcheat.bin"
+                },
+                {
+                    "type": "deleteFile",
+                    "file": "sdmc:/usrcheat.bin"
+                }
+            ],
+            "[nightly] usrcheat.bin": [
+                {
+                    "type": "downloadFile",
+                    "file": "https://github.com/Universal-Team/extras/raw/master/builds/Universal-Updater/Universal-Updater.3dsx",
+                    "message": "Downloading Universal-Updater.3dsx...",
+                    "output": "%3DSX%/_nds/TWiLightMenu/extras"
+                }
+            ],
+            "[nightly] Universal-Updater.cia": [
+                {
+                    "type": "downloadFile",
+                    "file": "https://github.com/Universal-Team/extras/raw/master/builds/Universal-Updater/Universal-Updater.cia",
+                    "output": "sdmc:/Universal-Updater.cia"
+                },
+                {
+                    "type": "installCia",
+                    "file": "/Universal-Updater.cia"
+                },
+                {
+                    "type": "deleteFile",
+                    "file": "sdmc:/Universal-Updater.cia"
+                }
+            ]
+        }
+    ]
+}
